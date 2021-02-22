@@ -1,13 +1,49 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main {
+  width: 900px;
+}
+.heading {
+  max-width: 450px;
+}
+.game{
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper {
+  display: grid;
+  width: 450px;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid black;
+}
+.score{
+  font-weight: bold;
+  font-size: 20px;
+}
+.cell {
+  width: 150px;
+  height: 150px;
+}
+.cell:nth-child(-n + 6) {
+  border-bottom: 1px solid black;
+}
+.cell:not(:nth-child(3n)) {
+  border-right: 1px solid black;
+}
+.mole {
+  background: url("../src/assets/images/mole.png") no-repeat center center /
+    cover;
+}
+.button{
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
 }
