@@ -40,7 +40,7 @@ class Board extends React.Component {
       if (this.state.timeleft === 0) {
         clearInterval(mCell);
       }
-    }, 700);
+    }, 400);
   }
   endGame() {
     let dashbord = [...this.state.dashbord];
